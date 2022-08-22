@@ -2,7 +2,7 @@
 const {category} = Astro.props;
 const {categoryList} = Astro.props;
 
-const counter = categoryList.filter(x => x==category).length
+const counter = categoryList.filter((x:string) => x==category).length
 
 ---
 
