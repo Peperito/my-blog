@@ -1,0 +1,11 @@
+---
+const {category} = Astro.props;
+const {categoryList} = Astro.props;
+
+const counter = categoryList.filter(x => x==category).length
+
+---
+
+    <button class="px-6 py-4 border bg-slate-300 text-slate-900 text-center rounded-md">
+        {`${category} (${counter})`} <br />
+    </button>

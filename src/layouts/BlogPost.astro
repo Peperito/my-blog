@@ -10,11 +10,12 @@ export interface Props {
 		pubDate?: string;
 		updatedDate?: string;
 		heroImage?: string;
+		category: string;
 	};
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage },
+	content: { title, description, pubDate, updatedDate, heroImage, category },
 } = Astro.props as Props;
 ---
 
@@ -39,8 +40,8 @@ const {
 			<article>
 				{heroImage && (
 					<img
-						width={720}
-						height={360}
+						width={"auto"}
+						height={"auto"}
 						src={heroImage}
 						alt=""
 					/>

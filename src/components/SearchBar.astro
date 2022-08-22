@@ -1,0 +1,41 @@
+---
+import ArticleCard from "./ArticleCard.astro";
+import StickerCat from "./StickerCat.astro";
+
+const posts = (await Astro.glob('../pages/blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+
+const q = Astro.url.searchParams.get("q")?.toLowerCase() ?? "";
+
+const filteredArticles = posts.filter((p) => p.frontmatter.title.toLowerCase().includes(q));
+
+const listCategory: string[] = posts.map((p) => p.frontmatter.category);
+
+const uniqueCategory = [...new Set(listCategory)];
+---
+
+<form class="flex justify-center">
+    <input
+    type="text"
+    name="q"
+    value=""
+    class="p-4 shadow-md focus:ring-slate-700 focus:border-slate-700 block w-2/4 m-12"
+    placeholder="Search Article"
+    />
+</form>
+
+<div class="flex flex-row justify-center items-center">
+    {
+    uniqueCategory.map((category) =>{
+    return (
+        <StickerCat category={category} categoryList={listCategory} />
+    )}
+    )}
+</div>
+
+<div>
+    {filteredArticles.map((post) => (
+        <ArticleCard post={post} />
+    ))}
+</div>
