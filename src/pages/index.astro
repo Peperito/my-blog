@@ -12,10 +12,10 @@ import SearchBar from '../components/SearchBar.astro';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	</head>
-	<body>
+	<body class="min-h-screen relative">
 		<Header title={SITE_TITLE} />
-		<SearchBar />
-		<main>
+		<main class="pb-16">
+			<SearchBar />
 			
 		</main>
 		<Footer />

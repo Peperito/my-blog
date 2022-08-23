@@ -3,9 +3,9 @@ const {post} = Astro.props;
 ---
 
 
-<div class="flex flex-row justify-between m-4 mx-16 shadow-lg">
+<a href={post.url} class="flex flex-row justify-between m-4 mx-16 shadow-lg">
     <div class="flex flex-col m-6 overflow-hidden">
-        <a class="text-2xl font-bold p-2" href={post.url}>{post.frontmatter.title}</a>
+        <p class="text-2xl font-bold p-2">{post.frontmatter.title}</p>
         <p class="text-md font-medium p-2">{post.frontmatter.description}</p>
         <time class="p-2" datetime={post.frontmatter.publishDate}>
         {new Date(post.frontmatter.publishDate).toLocaleDateString('en-us', {
@@ -16,7 +16,7 @@ const {post} = Astro.props;
         </time>
     </div>
     <img class="w-auto h-60 hidden xl:block" src={post.frontmatter.heroImage} alt="blogImage" />
-</div>
+</a>
 
 
 

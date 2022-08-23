@@ -6,6 +6,8 @@ const counter = categoryList.filter((x:string) => x==category).length
 
 ---
 
-    <button class="px-6 py-4 border bg-slate-300 text-slate-900 text-center rounded-md">
-        {`${category} (${counter})`} <br />
+    <button class="mx-4 px-6 py-4 border-2 border-slate-300 bg-slate-300 text-slate-900 text-center rounded-md  focus:bg-slate-500 focus:border-slate-800 hover:bg-slate-400"
+            id={category} 
+    >
+        {`${category} (${counter})`} 
     </button>
