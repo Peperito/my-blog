@@ -1,13 +1,16 @@
 ---
 const {category} = Astro.props;
 const {categoryList} = Astro.props;
+const {q} = Astro.props;
 
 const counter = categoryList.filter((x:string) => x==category).length
 
 ---
 
-    <button class="mx-4 px-6 py-4 border-2 border-slate-300 bg-slate-300 text-slate-900 text-center rounded-md  focus:bg-slate-500 focus:border-slate-800 hover:bg-slate-400"
-            id={category} 
+    <button class="mx-4 mb-6 px-6 py-4 border-2 border-slate-300 bg-slate-300 text-slate-900 text-center rounded-md hover:bg-slate-400"
+            value={`${q}x${category}`}
+            type="submit"
+            name="c"
     >
         {`${category} (${counter})`} 
     </button>

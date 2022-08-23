@@ -7,10 +7,14 @@ const posts = (await Astro.glob('../pages/blog/*.{md,mdx}')).sort(
 );
 
 const q = Astro.url.searchParams.get("q")?.toLowerCase() ?? "";
+const c = Astro.url.searchParams.get("c")?.toLowerCase() ?? "";
 
 const filteredArticles = posts.filter((p) => p.frontmatter.title.toLowerCase().includes(q));
 
-const listCategory: string[] = filteredArticles.map((p) => p.frontmatter.category);
+const catFilteredArticles = filteredArticles.filter((p) => 
+    p.frontmatter.title.toLowerCase().includes(c.slice(0, c.indexOf("x"))) && p.frontmatter.category.toLowerCase().includes(c.slice(c.indexOf("x") + 1)));
+
+const listCategory: string[] = catFilteredArticles.map((p) => p.frontmatter.category);
 
 const uniqueCategory = [...new Set(listCategory)];
 ---
@@ -20,7 +24,7 @@ const uniqueCategory = [...new Set(listCategory)];
     type="text"
     name="q"
     value=""
-    class="p-4 shadow-md focus:ring-slate-700 focus:border-slate-700 block w-2/4 m-12"
+    class="p-4 shadow-md focus:ring-slate-700 focus:border-slate-700 block w-2/4 m-12 mb-6"
     placeholder="Search Article"
     />
 </form>
@@ -29,13 +33,15 @@ const uniqueCategory = [...new Set(listCategory)];
     {
     uniqueCategory.map((category) =>{
     return (
-        <StickerCat category={category} categoryList={listCategory} />
+    <form class="flex justify-center">
+        <StickerCat category={category} categoryList={listCategory} q={q} />
+    </form>
     )}
     )}
 </div>
 
 <div>
-    {filteredArticles.map((post) => (
+    {catFilteredArticles.map((post) => (
         <ArticleCard post={post} />
     ))}
 </div>
