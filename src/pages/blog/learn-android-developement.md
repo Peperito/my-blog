@@ -24,13 +24,13 @@ Here is my selection of youtube tutorials for absolute beginners in their journe
 
 **[Get started with Jetpack compose](https://www.youtube.com/watch?v=cDabx3SjuOY&list=PLQkwcJG4YTCSpJ2NLhDTHhi6XBNfk9WiC&ab_channel=PhilippLackner)**
 
-**I can only recommend subscribing to Phillip channels, he also covers many more advanced topcs**
+**I can only recommend subscribing to Phillip's channel, he also covers a lot of more advanced topics**
 
 Once you're done with those 2 tutorials and are comfortable with the basics, don't hesitate to build your own first project.
 
 #### Consolidate the knowledge
 
-Now that your knowledge of the basics is fairly solid, it's time to... Revisit them.
+Now that your knowledge of the basics is fairly solid, it's time to... Revisit the same basics, but more in depth.
 Before moving to more advanced topics, carefully reading Kotlin docs and Android Developer Docs is a must.
 
 **[Kotlin Doc](https://kotlinlang.org/docs/home.html)** <br/>
@@ -38,9 +38,9 @@ Before moving to more advanced topics, carefully reading Kotlin docs and Android
 
 Finally, if you want to test yourself on the topics you learned so far, create a profile on **[Google Developers](https://developers.google.com/)**
 
-Checkout the the Android Development with Kotlin course, get your 13 badges
+Checkout the the Android Development with Kotlin course, get your badge after completing the 13 lessons and quizzes.
 
-With all this, you built yourself a strong base to explore Kotlin and Android Dev.
+With all this, you built yourself a strong base to explore Kotlin and Android Dev!
 
 > #### To sum it up
 >
