@@ -4,7 +4,7 @@ title: Learn Android Developement
 description: "How not to get lost while apprehending a new language and get
   started into Android Developement "
 publishDate: 2022-09-21T13:36:28.191Z
-heroImage: /assets/android-10-logo.jpg
+heroImage: /android-10-logo.jpg
 category: Kotlin
 ---
 # Get started with Android developement
