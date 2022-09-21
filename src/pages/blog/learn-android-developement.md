@@ -7,7 +7,6 @@ publishDate: 2022-09-21T13:36:28.191Z
 heroImage: /android-10-logo.jpg
 category: Kotlin
 ---
-# Get started with Android developement
 
 ## Before you get started
 
